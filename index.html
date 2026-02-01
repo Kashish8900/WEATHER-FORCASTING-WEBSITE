@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="search-screen" id="searchScreen">
+
+
+  <div class="sky">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+  </div>
+
+  <div class="search-box">
+  <input id="locationInput" placeholder="Enter city, state or country">
+  <button onclick="startWeather()">Search</button>
+</div>
+
+</div>
+
+<div class="weather-screen hidden" id="weatherScreen">
+
+  <div class="top">
+    <div class="left">
+      <img id="icon">
+      <div>
+        <h1><span id="temp"></span>°C</h1>
+        <p id="condition"></p>
+        <p>
+          Precipitation: <span id="rain"></span>% |
+          Humidity: <span id="humidity"></span>% |
+          Wind: <span id="wind"></span> km/h
+        </p>
+      </div>
+    </div>
+
+    <div class="right">
+      <h2>Weather</h2>
+      <p id="day"></p>
+      <p id="city"></p>
+    </div>
+  </div>
+
+  <div class="tabs">
+  <span class="tab active" onclick="changeTab('temp', this)">Temperature</span>
+  <span class="tab" onclick="changeTab('rain', this)">Precipitation</span>
+  <span class="tab" onclick="changeTab('wind', this)">Wind</span>
+</div>
+
+
+  <div class="graph">
+  <canvas id="weatherChart"></canvas>
+</div>
+
+  <div class="forecast" id="forecast"></div>
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script1.js"></script>
+
+</body>
+</html>
